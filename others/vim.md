@@ -1,0 +1,1 @@
+![](../g3doc/vi-vim-cheat-sheet-sch.gif)
