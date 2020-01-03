@@ -755,11 +755,12 @@ public:
         int index = partition(input, l, r);
         while(index != k){
             if(index > k){
-                index = partition(input, l, index-1);
+                r = index - 1;
             }
             else{
-                index = partition(input, index+1, r);
+                l = index + 1;
             }
+	    index = partition(input, l, r);
         }
         vector<int> res(input.begin(), input.begin()+k);
         return res;
@@ -781,6 +782,7 @@ private:
 };
 ```
 
+[LeetCode](https://leetcode.com/problems/k-closest-points-to-origin/discuss/220235/Java-Three-solutions-to-this-classical-K-th-problem.)
 
 
 ## 连续子数组的最大和
